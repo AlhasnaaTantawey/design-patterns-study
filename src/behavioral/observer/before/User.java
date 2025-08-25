@@ -1,4 +1,4 @@
-package observer.before;
+package behavioral.observer.before;
 
 public class User {
     private  String name;

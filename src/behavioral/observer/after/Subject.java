@@ -1,4 +1,4 @@
-package observer.after;
+package behavioral.observer.after;
 
 public interface Subject {
     void Subscribers(EventType eventType,Subscriber subscriber);

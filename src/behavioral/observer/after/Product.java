@@ -1,4 +1,4 @@
-package observer.before;
+package behavioral.observer.after;
 
 public class Product {
     private String name;

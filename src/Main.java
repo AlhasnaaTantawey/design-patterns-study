@@ -1,4 +1,4 @@
-import observer.after.*;
+import behavioral.observer.after.*;
 
 public class Main {
     public static void main(String[] args) {

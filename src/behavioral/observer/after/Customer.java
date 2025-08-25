@@ -1,5 +1,5 @@
-package observer.after;
-//concrete observer
+package behavioral.observer.after;
+//concrete behavioral.observer
 public class Customer implements Subscriber {
     private  String name;
 

@@ -1,4 +1,4 @@
-package observer.before;
+package behavioral.observer.before;
 
 import java.util.ArrayList;
 import java.util.List;

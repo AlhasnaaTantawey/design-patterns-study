@@ -1,4 +1,4 @@
-package observer.after;
+package behavioral.observer.after;
 
 public enum EventType {
     NEW_OFFER,

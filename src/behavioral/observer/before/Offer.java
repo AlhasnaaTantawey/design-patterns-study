@@ -1,4 +1,4 @@
-package observer.before;
+package behavioral.observer.before;
 
 public class Offer {
     private   String message;
