@@ -1,7 +1,6 @@
 package behavioral.strategy.after;
 
-import behavioral.strategy.calculatediscount.DiscountStrategy;
-
+//1-Context
 public class Product2 {
     private double price;
     private String name;

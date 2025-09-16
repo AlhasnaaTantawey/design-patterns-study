@@ -1,7 +1,6 @@
 package behavioral.strategy.after;
 
-import behavioral.strategy.before.PaymentMethod;
-
+//3. Concrete Strategies
 public class PaypalPaymentStrategy implements PaymentStrategy{
     @Override
     public void processPayment(double amount) {

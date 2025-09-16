@@ -1,7 +1,6 @@
 package behavioral.strategy.after;
 
-import behavioral.strategy.before.PaymentMethod;
-
+//2-Strategy Interface
 public interface PaymentStrategy {
     void processPayment(double amount );
 }

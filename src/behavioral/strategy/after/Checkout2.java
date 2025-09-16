@@ -1,7 +1,6 @@
 package behavioral.strategy.after;
 
-import behavioral.strategy.before.PaymentMethod;
-
+//1-Context
 public class Checkout2  {
 
     private  PaymentStrategy paymentStrategy;

@@ -1,7 +1,7 @@
 
 import behavioral.strategy.after.*;
 
-
+//4. Client (component of strategy pattern)
 public class Main {
     public static void main(String[] args) {
 

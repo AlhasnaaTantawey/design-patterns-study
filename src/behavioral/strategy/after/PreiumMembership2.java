@@ -1,5 +1,5 @@
 package behavioral.strategy.after;
-
+//3. Concrete Strategies
 public class PreiumMembership2 implements DiscountStrategy2 {
     @Override
     public double calculateDiscount(double price) {
