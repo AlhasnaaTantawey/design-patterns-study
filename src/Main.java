@@ -1,5 +1,9 @@
 
 import behavioral.strategy.after.*;
+import behavioral.template.before.GenerateReport;
+import behavioral.template.before.ImageCVReportGeration;
+import behavioral.template.before.PDFCVReportGeration;
+import behavioral.template.before.WordCVReportGeration;
 
 //4. Client (component of strategy pattern)
 public class Main {
@@ -51,25 +55,25 @@ public class Main {
 
         //  applying strategy pattern
 
-        Product2 watch =new Product2(100,"watch",new GoldMembership2());
-        watch.calculateFinalPrice( watch.getPrice());
-
-        System.out.println( "");
-
-        Product2 TV =new Product2(10000,"TV",new RegularMembership2());
-        TV.calculateFinalPrice( TV.getPrice());
-
-        System.out.println( "");
-        Product2 ball =new Product2(100,"ball",new PreiumMembership2());
-        ball.calculateFinalPrice(ball.getPrice());
-
-        Checkout2 watchcheckout2=new Checkout2(new BankTransferPaymentStrategy());
-        Checkout2 TVcheckout2=new Checkout2(new PaypalPaymentStrategy());
-        Checkout2 ballcheckout2=new Checkout2(new VisaCardPaymentStrategy());
-
-        watchcheckout2.processPayment(watch.getPrice());
-        TVcheckout2.processPayment(TV.getPrice());
-        ballcheckout2.processPayment(ball.getPrice());
+//        Product2 watch =new Product2(100,"watch",new GoldMembership2());
+//        watch.calculateFinalPrice( watch.getPrice());
+//
+//        System.out.println( "");
+//
+//        Product2 TV =new Product2(10000,"TV",new RegularMembership2());
+//        TV.calculateFinalPrice( TV.getPrice());
+//
+//        System.out.println( "");
+//        Product2 ball =new Product2(100,"ball",new PreiumMembership2());
+//        ball.calculateFinalPrice(ball.getPrice());
+//
+//        Checkout2 watchcheckout2=new Checkout2(new BankTransferPaymentStrategy());
+//        Checkout2 TVcheckout2=new Checkout2(new PaypalPaymentStrategy());
+//        Checkout2 ballcheckout2=new Checkout2(new VisaCardPaymentStrategy());
+//
+//        watchcheckout2.processPayment(watch.getPrice());
+//        TVcheckout2.processPayment(TV.getPrice());
+//        ballcheckout2.processPayment(ball.getPrice());
 
 
 
@@ -99,5 +103,19 @@ public class Main {
 //        onlionMarketPlace.addNewJonbOpening(new JobFinder("sales manager"));
 //        onlionMarketPlace.addNewProduct(new Product("tv",1000.0));
 //        onlionMarketPlace.addNewOffer(new Offer("new offer with 20% discount for every item"));
+
+        //without applying template pattern
+
+        PDFCVReportGeration pdfcvReportGeration=new PDFCVReportGeration();
+       GenerateReport pdfGenerratedReport= pdfcvReportGeration.generateCVReport("tmp/cv-001.pdf");
+        System.out.println(pdfGenerratedReport.isPasses());
+
+        WordCVReportGeration wordCVReportGeration=new WordCVReportGeration();
+       GenerateReport wordGeneratedReport=  wordCVReportGeration.generateCVReport("tmp/cv-002.doc");
+        System.out.println(wordGeneratedReport.isPasses());
+
+        ImageCVReportGeration imageCVReportGeration=new ImageCVReportGeration();
+        GenerateReport imageGeneratedReport=  imageCVReportGeration.generateCVReport("tmp/cv-003.png");
+        System.out.println(imageGeneratedReport.isPasses());
     }
 }
