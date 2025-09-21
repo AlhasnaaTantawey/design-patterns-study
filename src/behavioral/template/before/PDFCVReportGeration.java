@@ -6,7 +6,7 @@ public class PDFCVReportGeration implements CVReportGeneration{
     @Override
     public GenerateReport generateCVReport(String cvFilePath) {
         File file = readFile(cvFilePath);
-        ExtractData extractedData = extractFile(file);
+        Data2 extractedData = extractFile(file);
         AnalayizData analyzedData = analize(extractedData);
         return generateReportOf(analyzedData);
     }
@@ -23,13 +23,13 @@ public class PDFCVReportGeration implements CVReportGeneration{
     }
 
     @Override
-    public ExtractData extractFile(File file) {
+    public Data2 extractFile(File file) {
         System.out.println("extract data from word " );
         return null;
     }
 
     @Override
-    public AnalayizData analize(ExtractData extractData) {
+    public AnalayizData analize(Data2 data2) {
         System.out.println("analayiz data from: " );
         return null;
     }

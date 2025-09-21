@@ -1,5 +1,8 @@
 
 import behavioral.strategy.after.*;
+import behavioral.template.after.ImageCVReportGeration2;
+import behavioral.template.after.PDFCVReportGeration2;
+import behavioral.template.after.WordCVReportGeration2;
 import behavioral.template.before.GenerateReport;
 import behavioral.template.before.ImageCVReportGeration;
 import behavioral.template.before.PDFCVReportGeration;
@@ -105,17 +108,35 @@ public class Main {
 //        onlionMarketPlace.addNewOffer(new Offer("new offer with 20% discount for every item"));
 
         //without applying template pattern
+//
+//        PDFCVReportGeration pdfcvReportGeration=new PDFCVReportGeration();
+//       GenerateReport pdfGenerratedReport= pdfcvReportGeration.generateCVReport("tmp/cv-001.pdf");
+//        System.out.println(pdfGenerratedReport.isPasses());
+//
+//        WordCVReportGeration wordCVReportGeration=new WordCVReportGeration();
+//       GenerateReport wordGeneratedReport=  wordCVReportGeration.generateCVReport("tmp/cv-002.doc");
+//        System.out.println(wordGeneratedReport.isPasses());
+//
+//        ImageCVReportGeration imageCVReportGeration=new ImageCVReportGeration();
+//        GenerateReport imageGeneratedReport=  imageCVReportGeration.generateCVReport("tmp/cv-003.png");
+//        System.out.println(imageGeneratedReport.isPasses());
 
-        PDFCVReportGeration pdfcvReportGeration=new PDFCVReportGeration();
-       GenerateReport pdfGenerratedReport= pdfcvReportGeration.generateCVReport("tmp/cv-001.pdf");
+
+        //applying template pattern
+
+        PDFCVReportGeration2 pdfcvReportGeration=new PDFCVReportGeration2();
+        GenerateReport pdfGenerratedReport= pdfcvReportGeration.generateCVReport("tmp/cv-001.pdf",true);
         System.out.println(pdfGenerratedReport.isPasses());
+        System.out.println("/n");
 
-        WordCVReportGeration wordCVReportGeration=new WordCVReportGeration();
-       GenerateReport wordGeneratedReport=  wordCVReportGeration.generateCVReport("tmp/cv-002.doc");
+        WordCVReportGeration2 wordCVReportGeration=new WordCVReportGeration2();
+        GenerateReport wordGeneratedReport=  wordCVReportGeration.generateCVReport("tmp/cv-002.doc",false);
         System.out.println(wordGeneratedReport.isPasses());
+        System.out.println("/n");
 
-        ImageCVReportGeration imageCVReportGeration=new ImageCVReportGeration();
-        GenerateReport imageGeneratedReport=  imageCVReportGeration.generateCVReport("tmp/cv-003.png");
+        ImageCVReportGeration2 imageCVReportGeration=new ImageCVReportGeration2();
+        GenerateReport imageGeneratedReport=  imageCVReportGeration.generateCVReport("tmp/cv-003.png",false);
         System.out.println(imageGeneratedReport.isPasses());
+
     }
 }

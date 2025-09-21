@@ -8,7 +8,7 @@ public interface CVReportGeneration {
 
     GenerateReport generateCVReport(String cvFilePath);
 
-     ExtractData extractFile(File file);
+     Data2 extractFile(File file);
 
-    AnalayizData analize(ExtractData extractData);
+    AnalayizData analize(Data2 data2);
 }

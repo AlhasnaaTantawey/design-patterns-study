@@ -1,4 +1,4 @@
 package behavioral.template.before;
 
-public class ExtractData {
+public class Data2 {
 }
