@@ -2,7 +2,7 @@ package behavioral.template.after;
 
 
 import java.io.File;
-
+//Concrete Subclas
 public class PDFCVReportGeration2 extends CVReportGeneration2 {
 
 
